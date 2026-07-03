@@ -76,7 +76,7 @@
         "# Authenticate with HuggingFace\n",
         "# Get your free token at: https://huggingface.co/settings/tokens\n",
         "from huggingface_hub import login\n",
-        "HF_TOKEN = \"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\"   # <-- paste your token here\n",
+        "HF_TOKEN = \"token\"   # <-- paste your token here\n",
         "login(HF_TOKEN)\n",
         "\n",
         "import torch\n",
