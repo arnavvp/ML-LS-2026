@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables / API keys
+.env
+
+# FAISS generated indexes
+index/
+*.index
+*.faiss
+*.pkl
+
+# Uploaded PDFs / dataset (optional)
+data/
+*.pdf
+
+# Streamlit
+.streamlit/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# HuggingFace cache
+.cache/
+huggingface/
+
+# PyTorch/model files
+*.pt
+*.pth
+*.bin
+*.safetensors
