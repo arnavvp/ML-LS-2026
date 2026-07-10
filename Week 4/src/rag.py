@@ -105,3 +105,53 @@ ANSWER:
         confidence,
         grounded
     )
+
+def answer_with_chunks(question, retrieved_chunks):
+
+    context = ""
+
+
+    for chunk in retrieved_chunks:
+
+        context += f"""
+
+SOURCE: {chunk["source"]}
+
+{chunk["text"]}
+
+"""
+
+
+    prompt = f"""
+You are a document assistant.
+
+Answer ONLY using this context.
+
+If the answer is missing, say:
+"I don't know based on the provided document."
+
+CONTEXT:
+{context}
+
+QUESTION:
+{question}
+
+ANSWER:
+"""
+
+
+    response = model.generate_content(
+        prompt
+    )
+
+
+    confidence = max(
+        chunk["score"]
+        for chunk in retrieved_chunks
+    )
+
+
+    return (
+        response.text,
+        confidence
+    )

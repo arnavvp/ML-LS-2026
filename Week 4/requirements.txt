@@ -1,0 +1,22 @@
+streamlit
+
+# PDF parsing
+pymupdf
+pypdf
+
+# RAG / embeddings
+sentence-transformers
+faiss-cpu
+
+# ML dependencies
+numpy
+scikit-learn
+
+# LLM API
+google-generativeai
+
+# environment variables
+python-dotenv
+
+# utilities
+tqdm
